@@ -5,8 +5,8 @@ import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  templateUrl: './users.component.html'
+  
 })
 export class UsersComponent implements OnInit {
   user_list: User[] = [];

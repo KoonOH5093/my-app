@@ -1,4 +1,4 @@
-<div *ngIf="user">
+<div *ngIf="user" style="align-self: center;">
     <h2><span>User ID:</span>  {{user.id}} Details</h2>
     <div><span>id: </span>{{user.id}}</div>
     <div><span>name: </span>
@@ -14,8 +14,9 @@
         <input class="form-control" id="birthdate" type="date" (ngModelChange)="updatedate(user, $event)" 
         [ngModel]="user.birthdate |date:'yyyy-MM-dd'" placeholder="birthdate">
     </div>
-  
-</div>
 
-<button (click)="goBack()">back</button>
-<button (click)="save()">save</button>
+    
+    <button (click)="goBack()">back</button>
+    <button (click)="save()">save</button>
+
+</div>
