@@ -1,0 +1,23 @@
+<h2>Add New User</h2>
+<div class="newUser">
+    <div><label for="name">name: </label>
+        <input id="name" placeholder="username" #userName/>
+    </div>
+    <div><label for="email">email: </label>
+        <input id="email" placeholder="email" #userEmail/>
+    </div>
+    <div><label for="phone">phone: </label>
+        <input id="phone" placeholder="phone number" #userPhone/>
+    </div>
+    <div><label for="birthdate">birthdate: </label>
+        <input id="birthdate" type="date" 
+        [ngModel]="day | date:'yyyy-MM-dd'"  
+        (ngModelChange)="day = $event" 
+        #userBirthdate/>
+    </div>
+
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="goBack()">back</button>
+    <button (click)="add(userName.value,userEmail.value,userPhone.value, day)">Add User</button>
+</div>
