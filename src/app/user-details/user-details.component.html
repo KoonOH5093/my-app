@@ -1,21 +1,25 @@
 <div *ngIf="user" style="align-self: center;">
     <h2><span>User ID:</span>  {{user.id}} Details</h2>
     <div><span>id: </span>{{user.id}}</div>
+    <br>
     <div><span>name: </span>
         <input id="name" [(ngModel)]="user.name" placeholder="name">
     </div>
+    <br>
     <div><span>email: </span>
         <input id="email" [(ngModel)]="user.email" placeholder="email">
     </div>
+    <br>
     <div><span>phone: </span>
         <input id="phone" [(ngModel)]="user.phone" placeholder="phone">
     </div>
+    <br>
     <div><span>birthdate: </span>
         <input class="form-control" id="birthdate" type="date" (ngModelChange)="updatedate(user, $event)" 
         [ngModel]="user.birthdate |date:'yyyy-MM-dd'" placeholder="birthdate">
     </div>
+    <br>
 
-    
     <button (click)="goBack()">back</button>
     <button (click)="save()">save</button>
 
